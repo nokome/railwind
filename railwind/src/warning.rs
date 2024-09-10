@@ -49,6 +49,14 @@ impl Warning {
             position: position.clone(),
         }
     }
+
+    pub fn message(&self) -> &str {
+        &self.message
+    }
+
+    pub fn position(&self) -> &Position {
+        &self.position
+    }
 }
 
 impl fmt::Display for Warning {
@@ -74,6 +82,18 @@ impl Position {
             line,
             column,
         }
+    }
+
+    pub fn file(&self) -> &String {
+        &self.file
+    }
+
+    pub fn line(&self) -> usize {
+        self.line
+    }
+
+    pub fn column(&self) -> usize {
+        self.column
     }
 }
 
